@@ -8,10 +8,10 @@ Changes Log - 05/19/2020 - R01 - File Created
 """
 
 import os
-import sqlite3
+#import sqlite3
 
 #define DB client
-fileDB =
+#fileDB =
 
 """
 def main():
