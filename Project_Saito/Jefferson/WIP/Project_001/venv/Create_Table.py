@@ -1,60 +1,44 @@
 """
-Start Data - 19/05/2020
-Project Name - Pizzaria de la puta que lo pario
-File - Main.py
-Authors - Jefferson Balduino // Victor Machado // Henrique Mariano
+Data........: 2020-05-08
+Projeto.....: Projeto02 - Manipulacao de Dados com Python e SQLite
+Arquivo.....: criaTabelaCliente.py
+Descrição...: Faz a criacao da tabela cliente
+Autor.......: Rodrigo Saito
+Observações.: 2020-05-08 - [R00] Criação do Arquivo - Versao 1.00
+              ...
+Referencias: https://www.w3schools.com/python/python_file_remove.asp
 
-Changes Log - 05/19/2020 - R01 - File Created
 """
-
 import os
 import sqlite3
 
-#define DB client
-fileDB = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Database/Test_DB'
+#definindo um arquivo para clientes
+fileDB = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Database/Menu'
 
-#
-
-#valida se eu tenho o arquivo ou nao
-print('Excluindo o arquivo de banco de dados, caso exista.')
+#excluindo o arquivo de banco de dados
+print(f'Check if the DB: {fileDB} exists.')
 if os.path.exists(fileDB):
     os.remove(fileDB)
 else:
-    print(f'O arquivo: {fileDB} nao existe!')
+    print(f'File: {fileDB} not found!')
 
-#cria a table
-print(f'Criando um arquivo {fileDB}')
+# Criando a base de dados
+print(f'Creating DB @ {fileDB}')
 connection = sqlite3.connect(fileDB)
 
-#cria o cursor object
+# Get a cursor object
 cursor = connection.cursor()
 
-#criacao da tabelas
+#Criacao de tabelas
 def create_table():
     cursor.execute('CREATE TABLE IF NOT EXISTS cliente \
-                   (id     integer PRIMARY KEY, \
-                    nome   varchar(40),\
-                    cidade varchar(30), \
-                    salario decimal(10,2) )'
+                   (ID      integer PRIMARY KEY AUTOINCREMENT, \
+                    TYPE    varchar(10), \
+                    PIZZA  varchar(15), \
+                    INGREDIENTS varchar(120),\
+                    STD_PRICE decimal (10,2),\
+                    MED_PRICE decimal (10,2),\
+                    LRD_PRICE decimal (10,2),\
+                    SUP_PRICE decimal (10,2) )'
                    )
 create_table()
-
-
-"""
-def main():
-    menuPrincipal()
-
-
-def menuPrincipal():
-    print('Main Menu')
-    print('1 - Add New Item')
-    print('2 - Edit Existing Item')
-    print('3 - Help')
-    print('Type your option: ')
-    selection = int(input())
-
-
-if __name__ == '__main__':
-    main()
-
-"""
