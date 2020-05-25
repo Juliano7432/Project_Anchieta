@@ -12,26 +12,21 @@ Referencias: https://www.w3schools.com/python/python_file_remove.asp
 import os
 import sqlite3
 
-#definindo um arquivo para clientes
-fileDB = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Database/Menu'
+fileDB = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Project_001/Database/MENU'
 
-#excluindo o arquivo de banco de dados
 print(f'Check if the DB: {fileDB} exists.')
 if os.path.exists(fileDB):
     os.remove(fileDB)
 else:
     print(f'File: {fileDB} not found!')
 
-# Criando a base de dados
 print(f'Creating DB @ {fileDB}')
 connection = sqlite3.connect(fileDB)
 
-# Get a cursor object
 cursor = connection.cursor()
 
-#Criacao de tabelas
-def create_table():
-    cursor.execute('CREATE TABLE IF NOT EXISTS cliente \
+def Create_Mable():
+    cursor.execute('CREATE TABLE IF NOT EXISTS MENU \
                    (ID      integer PRIMARY KEY AUTOINCREMENT, \
                     TYPE    varchar(10), \
                     PIZZA  varchar(15), \
@@ -41,4 +36,4 @@ def create_table():
                     LRD_PRICE decimal (10,2),\
                     SUP_PRICE decimal (10,2) )'
                    )
-create_table()
+Create_Mable()

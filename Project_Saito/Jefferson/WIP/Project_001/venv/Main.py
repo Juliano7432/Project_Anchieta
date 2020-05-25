@@ -8,6 +8,7 @@ Changes Log - 05/19/2020 - R01 - File Created
 """
 
 import os
+import numpy as np
 
 def main():
     menuPrincipal()
@@ -16,8 +17,11 @@ def main():
 def menuPrincipal():
     print('Main Menu')
     print('1 - Add New Item')
-    print('2 - Edit Existing Item')
-    print('3 - Help')
+    print('2 - Show Menu')
+    print('3 - Edit Menu')
+    print('4 - Show ALL Requests')
+    print('0 - Reset DB - WARNING!!!')
+    print('9 - Help')
     print('Type your option: ')
     selection = int(input())
 
