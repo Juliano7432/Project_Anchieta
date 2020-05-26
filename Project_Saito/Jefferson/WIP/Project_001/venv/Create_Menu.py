@@ -10,20 +10,23 @@ Observações.: Poderia ser bem mais facil
 import os
 import sqlite3
 
+def create():
+    createmenu()
+
 fileDB = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Project_001/Database/MENU'
 
-print(f'Check if the DB: {fileDB} exists.')
-if os.path.exists(fileDB):
-    os.remove(fileDB)
-else:
-    print(f'File: {fileDB} not found!')
+def createmenu():
+    print(f'Check if the DB: {fileDB} exists.')
+    if os.path.exists(fileDB):
+        os.remove(fileDB)
+    else:
+        print(f'File: {fileDB} not found!')
 
-print(f'Creating DB @ {fileDB}')
-connection = sqlite3.connect(fileDB)
+    print(f'Creating DB @ {fileDB}')
+    connection = sqlite3.connect(fileDB)
 
-cursor = connection.cursor()
+    cursor = connection.cursor()
 
-def Create_Mable():
     cursor.execute('CREATE TABLE IF NOT EXISTS MENU \
                    (ID      integer PRIMARY KEY AUTOINCREMENT, \
                     TYPE    varchar(10), \
@@ -34,4 +37,4 @@ def Create_Mable():
                     LRD_PRICE decimal (10,2),\
                     SUP_PRICE decimal (10,2) )'
                    )
-Create_Mable()
+createmenu()
