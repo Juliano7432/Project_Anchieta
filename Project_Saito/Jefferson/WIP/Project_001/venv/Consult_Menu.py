@@ -45,9 +45,10 @@ print('MED_PRICE:', user1[5]) #Imprime o quarto campo
 print('LRD_PRICE:', user1[6]) #Imprime o quarto campo
 print('SUP_PRICE:', user1[7]) #Imprime o quarto campo
 
-print('\nImpressao de toda as tuplas')
-all_rows = cursor.fetchall()
-for row in all_rows:
-    #row[0] retorna a primeira coluna da query (id),
-    #row[1] retorna a segunda coluna (nome)
-    print('{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}'.format(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8]))
+cursor.execute("SELECT * from MENU")
+#user1 = cursor.fetchone() #retrieve the first row
+myresult = cursor.fetchall()
+
+for x in myresult:
+  print(x)
+
