@@ -1,13 +1,12 @@
 """
-Data........: 2020-05-08
-Projeto.....: Projeto02 - Manipulacao de Dados com Python e SQLite
-Arquivo.....:inserirCliente.py
-Descrição...: Faz a inserção de dados na tabela cliente
-Autor.......: Rodrigo Saito
-Observações.: 2020-05-08 - [R00] Criação do Arquivo - Versao 1.00
-              ...
-Referencias: https://docs.python.org/2/library/sqlite3.html
+Data........: 2020-25-05
+Projeto.....: Pizzaria Bobs
+Arquivo.....: Consult_Menu.Py
+Descrição...: Main Menu for Selection
+Autor.......: Jefferson, Henrique, Victor e Juliano
+Observações.: Poderia ser bem mais facil
 """
+
 import os
 import sqlite3
 #import Numpy as np

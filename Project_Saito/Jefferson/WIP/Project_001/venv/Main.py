@@ -1,10 +1,10 @@
 """
-Start Data - 19/05/2020
-Project Name - Pizzaria de la puta que lo pario
-File - Main.py
-Authors - Jefferson Balduino // Victor Machado // Henrique Mariano
-
-Changes Log - 05/19/2020 - R01 - File Created
+Data........: 2020-25-05
+Projeto.....: Pizzaria Bobs
+Arquivo.....: Main.Py
+Descrição...: Main Menu for Selection
+Autor.......: Jefferson, Henrique, Victor e Juliano
+Observações.: Poderia ser bem mais facil
 """
 
 import os

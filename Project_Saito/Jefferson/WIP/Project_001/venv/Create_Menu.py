@@ -1,14 +1,12 @@
 """
-Data........: 2020-05-08
-Projeto.....: Projeto02 - Manipulacao de Dados com Python e SQLite
-Arquivo.....: criaTabelaCliente.py
-Descrição...: Faz a criacao da tabela cliente
-Autor.......: Rodrigo Saito
-Observações.: 2020-05-08 - [R00] Criação do Arquivo - Versao 1.00
-              ...
-Referencias: https://www.w3schools.com/python/python_file_remove.asp
-
+Data........: 2020-25-05
+Projeto.....: Pizzaria Bobs
+Arquivo.....: Create_Menu.Py
+Descrição...: Main Menu for Selection
+Autor.......: Jefferson, Henrique, Victor e Juliano
+Observações.: Poderia ser bem mais facil
 """
+
 import os
 import sqlite3
 
