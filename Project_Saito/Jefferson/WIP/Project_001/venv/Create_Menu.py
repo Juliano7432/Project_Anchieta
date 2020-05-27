@@ -35,6 +35,7 @@ def createmenu():
                     STD_PRICE decimal (10,2),\
                     MED_PRICE decimal (10,2),\
                     LRD_PRICE decimal (10,2),\
-                    SUP_PRICE decimal (10,2) )'
+                    SUP_PRICE decimal (10,2),\
+                    DELETED bit() )'
                    )
 createmenu()
