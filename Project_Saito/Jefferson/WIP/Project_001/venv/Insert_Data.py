@@ -31,7 +31,7 @@ def menuPrincipal():
     Ingredientes = input()
     print('\nQual é o valor dessa pizza (Valor padrão)??')
     Value = float(input())
-    print('\n\n\nAs opções abaixo estão corretas?? (Y/N)\n')
+    print('\n\n\nAs opções abaixo estão corretas?? (Sim/Nao)\n')
     print('Nome da Pizza: ', PizzaName)
     print('Tipo da Pizza: ', PizzaType)
     print('Ingredientes: ', Ingredientes)
@@ -39,8 +39,8 @@ def menuPrincipal():
     print('Valor Média: ', Value*1.15)
     print('Valor Grande: ', Value*1.25)
     print('Valor Super: ', Value*1.35)
-    insertdata = int(input())
-    if insertdata == 1:
+    insertdata = input()
+    if insertdata == 'Sim':
         recordedval = [(PizzaType,PizzaName,Ingredientes,Value,Value*1.15,Value*1.25,Value*1.35)]
         cursor.executemany("INSERT INTO MENU (TYPE, PIZZA, INGREDIENTS, STD_PRICE, MED_PRICE, LRD_PRICE, SUP_PRICE) \
                         values (:TYPE, :PIZZA, :INGREDIENTS, :STD_PRICE, :MED_PRICE, :LRD_PRICE, :SUP_PRICE)",
