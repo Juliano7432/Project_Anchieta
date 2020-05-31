@@ -9,46 +9,46 @@ Observações.: Poderia ser bem mais facil
 
 import os
 import sqlite3
-#import Numpy as np
+import Main
 
 #definindo um arquivo para clientes
-fileDB = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Project_001/Database/Menu'
+Path_MENU = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Project_001/Database/MENU'
+Path_CUSTOMERS = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Project_001/Database/CUSTOMERS'
+Path_ORDERS = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Project_001/Database/ORDERS'
 
-#verificando se arquivo de banco de dados existe
-print(f'Verificando se arquivo {fileDB} existe.')
-if not os.path.exists(fileDB):
-    print(f'O arquivo: {fileDB} não existe!')
-    exit(-1)
-else:
-    pass
-
-# Criando a base de dados
-connection = sqlite3.connect(fileDB)
+DB_MENU = sqlite3.connect(Path_MENU)
+DB_CUSTOMERS = sqlite3.connect(Path_CUSTOMERS)
+Path_ORDERS = sqlite3.connect(Path_ORDERS)
 
 # Get a cursor object
-cursor = connection.cursor()
+cursor_MENU = DB_MENU.cursor()
+cursor_CUSTOMERS = DB_CUSTOMERS.cursor()
+cursor_ORDERS = Path_ORDERS.cursor()
 
-# Adicionando dados da tabela
-#Selecionando os dados da tabela
+def Show_Menu():
+    cursor_MENU.execute("SELECT * from MENU")
+    #user1 = cursor.fetchone() #retrieve the first row
+    myresult = cursor_MENU.fetchall()
+    for x in myresult:
+        print(x)
 
-#ID, TYPE, PIZZA, INGREDIENTS, STD_PRICE, MED_PRICE, LRD_PRICE, SUP_PRICE
+    Main.menuPrincipal()
 
-cursor.execute("SELECT ID, TYPE, PIZZA, INGREDIENTS, STD_PRICE, MED_PRICE, LRD_PRICE, SUP_PRICE from MENU")
-user1 = cursor.fetchone() #retrieve the first row
-print('\nImpressao de campo a campo')
-print('ID:', user1[0]) #Imprime o primeiro campo
-print('TYPE', user1[1]) #Imprime o segundo campo
-print('PIZZA:', user1[2]) #Imprime o terceiro campo
-print('INGREDIENTS:', user1[3]) #Imprime o quarto campo
-print('STD_PRICE:', user1[4]) #Imprime o quarto campo
-print('MED_PRICE:', user1[5]) #Imprime o quarto campo
-print('LRD_PRICE:', user1[6]) #Imprime o quarto campo
-print('SUP_PRICE:', user1[7]) #Imprime o quarto campo
+def Show_Customers():
+    cursor_CUSTOMERS.execute("SELECT * from CUSTOMERS")
+    #user1 = cursor.fetchone() #retrieve the first row
+    myresult = cursor_CUSTOMERS.fetchall()
 
-cursor.execute("SELECT * from MENU")
-#user1 = cursor.fetchone() #retrieve the first row
-myresult = cursor.fetchall()
+    for x in myresult:
+        print(x)
 
-for x in myresult:
-  print(x)
+def Show_Orders():
+    cursor_ORDERS.execute("SELECT * from ORDERS")
+    #user1 = cursor.fetchone() #retrieve the first row
+    myresult = cursor_ORDERS.fetchall()
 
+    for x in myresult:
+        print(x)
+
+if __name__ == '__main__':
+    Show_Menu()

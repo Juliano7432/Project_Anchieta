@@ -49,7 +49,7 @@ def Insert_Pizza():
                         values (:TYPE, :PIZZA, :INGREDIENTS, :STD_PRICE, :MED_PRICE, :LRD_PRICE, :SUP_PRICE)",
                            recordedval)
 
-        cursor_MENU.commit()
+        DB_MENU.commit()
         print('Dados inseridos com sucesso!')
 
     else:
@@ -80,7 +80,7 @@ def Insert_Customer():
                         values (:TYPE, :PIZZA, :INGREDIENTS, :STD_PRICE, :MED_PRICE, :LRD_PRICE, :SUP_PRICE)",
                            recordedval)
 
-        cursor_MENU.commit()
+        DB_MENU.commit()
         print('Dados inseridos com sucesso!')
 
     else:
@@ -111,7 +111,7 @@ def Insert_Order():
                         values (:TYPE, :PIZZA, :INGREDIENTS, :STD_PRICE, :MED_PRICE, :LRD_PRICE, :SUP_PRICE)",
                            recordedval)
 
-        cursor_MENU.commit()
+        DB_MENU.commit()
         print('Dados inseridos com sucesso!')
 
     else:

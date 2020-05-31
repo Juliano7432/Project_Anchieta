@@ -11,6 +11,7 @@ import os
 import sqlite3
 import Create_Menu
 import Insert_Data
+import Consult_Menu
 
 
 def main():
@@ -37,7 +38,7 @@ def menuPrincipal():
     print('Main Menu')
     print('1 - Add New Item')
     print('2 - Add New Pizza')
-    print('3 - Edit Menu')
+    print('3 - Show Menu')
     print('4 - Show ALL Requests')
     print('0 - Reset DB - WARNING!!!')
     print('9 - Help')
@@ -48,7 +49,7 @@ def menuPrincipal():
     elif selection == 2:
         Insert_Data.Insert_Pizza()
     elif selection == 3:
-        print('Opcao_3')
+        Consult_Menu.Show_Menu()
     elif selection == 4:
         print('Opcao_4')
     elif selection == 5:

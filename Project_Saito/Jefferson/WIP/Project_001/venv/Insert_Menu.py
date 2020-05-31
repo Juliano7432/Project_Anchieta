@@ -12,7 +12,7 @@ import sqlite3
 #import Numpy as np
 
 #definindo um arquivo para clientes
-fileDB = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Project_001/Database/Menu'
+fileDB = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Project_001/Database/MENU'
 
 #verificando se arquivo de banco de dados existe
 print(f'Verificando se arquivo {fileDB} existe.')
