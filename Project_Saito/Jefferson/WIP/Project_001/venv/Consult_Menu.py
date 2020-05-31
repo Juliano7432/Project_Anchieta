@@ -33,7 +33,7 @@ def Show_Menu():
         print(x)
 
     Main.menuPrincipal()
-
+"""
 def Show_Customers():
     cursor_CUSTOMERS.execute("SELECT * from CUSTOMERS")
     #user1 = cursor.fetchone() #retrieve the first row
@@ -52,3 +52,5 @@ def Show_Orders():
 
 if __name__ == '__main__':
     Show_Menu()
+
+"""
