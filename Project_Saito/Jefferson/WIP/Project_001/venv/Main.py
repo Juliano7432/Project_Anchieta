@@ -10,6 +10,7 @@ Observações.: Poderia ser bem mais facil
 import os
 import sqlite3
 import Create_Menu
+import Insert_Data
 
 
 def main():
@@ -35,7 +36,7 @@ def GerarOrdem():
 def menuPrincipal():
     print('Main Menu')
     print('1 - Add New Item')
-    print('2 - Show Menu')
+    print('2 - Add New Pizza')
     print('3 - Edit Menu')
     print('4 - Show ALL Requests')
     print('0 - Reset DB - WARNING!!!')
@@ -44,11 +45,20 @@ def menuPrincipal():
     selection = int(input())
     if selection == 1:
         subOrder()
-    elif selection == 0:
-        Create_Menu.createmenu()
+    elif selection == 2:
+        Insert_Data.Insert_Pizza()
     elif selection == 3:
-        print('3 - Edit Menu')
+        print('Opcao_3')
+    elif selection == 4:
+        print('Opcao_4')
+    elif selection == 5:
+        print('Opcao_5')
+    elif selection == 6:
+        print('Opcao_6')
+    elif selection == 7:
+        print('Opcao_7')
     else:
+        print('Opcao Invalida!!!')
         menuPrincipal()
 
 if __name__ == '__main__':

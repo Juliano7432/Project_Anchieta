@@ -27,20 +27,7 @@ def createmenu():
 
     cursor = connection.cursor()
 
-'''
-ID
-Telefone 
-Nome
-Endereço 
-Número 
-Complemento 
-Bairro
-Cidade
-UF
-CEP
-'''
-
-    cursor.execute('CREATE TABLE IF NOT EXISTS MENU \
+    cursor.execute('CREATE TABLE IF NOT EXISTS CLIENTE \
                    (ID      integer PRIMARY KEY AUTOINCREMENT, \
                     FIRST_NAME     varchar(25), \
                     LAST_NAME      varchar(25), \
@@ -50,7 +37,6 @@ CEP
                     BAIRRO         varchar(15),\
                     CIDADE         varchar(15),\
                     UF             varchar(2),\
-                    CEP            varchar(9),\
-                    DELETED        bit() )'
+                    CEP            varchar(9))'
                    )
 createmenu()
