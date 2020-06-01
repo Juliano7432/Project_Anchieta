@@ -13,6 +13,10 @@ import Create_Menu
 import Insert_Data
 import Consult_Menu
 
+Path_MENU = '/Users/jbaldui/Documents/GitHub/Project_Anchieta/Project_Saito/Jefferson/WIP/Project_001/Database/MENU'
+DB_MENU = sqlite3.connect(Path_MENU)
+cursor_MENU = DB_MENU.cursor()
+
 
 def main():
     menuPrincipal()
